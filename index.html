@@ -3,114 +3,404 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>송송이 청첩장</title>
-   <style>
-      * {margin: 0; padding: 0; box-sizing: border-box;}
-   </style>
+   <meta name="description" content="가장 풍요롭고 생생한 시간, 오늘을 주제로 한 전통 한식 다이닝.">
+   <meta name="keywords" content="맛집, 한식, Korean Food, Gangnam">
+   <meta name="author" content="행복에프앤씨재단">
+   <title>레스토랑 오늘</title>
+   
+   <link rel="stylesheet" href="css/index.css">
+   <script>
+      function gnbOver() {
+
+         document.getElementById('gnb').style = " background-color:white;";
+
+         for ( i=0; i<6; i++) {
+         document.getElementsByClassName('gnb_menu_a')[i].style = "color:black;"
+         }
+         document.getElementById('gnb_logo_main').src = "img/logo.png";
+         document.getElementById('gnb_hiddenmenu_main').src = "img/icon_menu.png";
+      }
+
+      function gnbOut() {
+
+         document.getElementById('gnb').style = " background-color:rgba(0,0,0,0);";
+
+         for ( i=0; i<6; i++) {
+         document.getElementsByClassName('gnb_menu_a')[i].style = "color:white;"
+         }
+         document.getElementById('gnb_logo_main').src = "img/logo_on.png";
+         document.getElementById('gnb_hiddenmenu_main').src = "img/icon_menu_main.png";
+         }
+   </script>
 </head>
 
 <body>
-   <!-- hero image -->
-   <div style="width: 100%; height: 100vh;">
-      <img src="img/main_top_bg.jpg" style="width: 100%;">
-      <h1 style="text-align: center; font-size: 40px; margin-top: 80px; font-family: serif;" title="카드의 제목">우리 결혼합니다</h1>
-      <h2 style="text-align: center; font-size: 35px; color: olivedrab; font-family: serif; margin-top: 20px;">05 / 30</h2>
-      <h3 style="text-align: center; font-size: 15px; margin-top: 100px; font-family: serif;">김주원 x 송송이</h3>
-      <h4 style="text-align: center; font-size: 15px; font-family: serif; margin-top: 13px;">2020.05.30 SAT 12:00 PM</h4>
-      <p style="text-align: center; font-size: 15px; font-family: serif; margin-top: 3px;">소통컨벤션웨딩 7층 라온제나홀</p>
-   </div>
+   <header>
 
-   <div style="width: 100%; height: 100vh; background-color: rgb(251,251,251); padding-top: 80px;">
-      <img src="img/title_img_1.jpg" style="width: 100%;">
-      <p style="font-family: serif; font-size:14px; text-align: center; line-height: 28px; margin-top: 60px;">
-         평생을 같이하고 싶은 사람을 만났습니다.<br>
-         서로 아끼며 이해하고, 사랑하며 살겠습니다.<br> 
-         저희 약속 위에 따뜻한 격려로 축복해 주시면 <br>
-         감사하겠습니다.
-      </p>
-      <img src="img/img1.jpg" style="width: 100%; margin-top: 60px;">
-      <p style="font-family: serif; font-size:14px; text-align: center; line-height: 20px; margin-top: 60px;">
-         신랑에게 축하인사 
-         <img src="img/call25.png" style="margin-left: 20px; margin-right: 10px; height: 16px;">
-         |
-         <img src="img/sms25.png" style="margin-left: 10px; margin-right: 20px; height: 16px;">
-      </p>
-      <p style="font-family: serif; font-size:14px; text-align: center; line-height: 20px; margin-top: 10px;">
-         신부에게 축하인사 
-         <img src="img/call25.png" style="margin-left: 20px; margin-right: 10px; height: 16px;">
-         |
-         <img src="img/sms25.png" style="margin-left: 10px; margin-right: 20px; height: 16px;">
-      </p>
-   </div>
-
-   
-      <p style="font-family: serif; background-color: rgb(99,126,82); font-size:16px; text-align: center; line-height: 50px; color: white;">
-         혼주분께 연락하기</p>
-
-   <div style="display: flex; text-align: center; padding-top:60px; background-color: rgb(234,241,230); padding-bottom:60px;">      
-         <div style="width: 50%;">
-            <p style="line-height: 50px;">신랑측 혼주</p>
-            <p style="line-height: 30px;">아버지 유도기</p>
-            <div>
-               <img src="img/call25.png">&nbsp;&nbsp;&nbsp;<img src="img/sms25.png">
-            </div>
-            <p style="line-height: 30px;">어머니 이순오</p>
-            <div>
-               <img src="img/call25.png">&nbsp;&nbsp;&nbsp;<img src="img/sms25.png">
-            </div>
+      <!-- 데스크탑 화면 GNB -->
+      <div class="gnb_wrap" id="gnb" onmouseover="gnbOver()"  onmouseout="gnbOut()">
+         <!-- gnb 메뉴 부분 -->
+         <div class="gnb_logo"> 
+            <img src="img/logo_on.png" alt="레스토랑 오늘 로고" class="gnb_logo_img" id="gnb_logo_main">
          </div>
 
-         <div style="width: 50%;">
-            <p style="line-height: 50px;"> 신부측 혼주</p>
-            <p style="line-height: 30px;">아버지 이준호</p>
-            <div>
-               <img src="img/call25.png">&nbsp;&nbsp;&nbsp;<img src="img/sms25.png">
+         <!-- gnb 메뉴 부분 -->
+         <div class="gnb_menu"> 
+            <a href="#" class="gnb_menu_a">o'neul</a>
+            <a href="#" class="gnb_menu_a">Menu</a>
+            <a href="#" class="gnb_menu_a">People</a>
+            <a href="#" class="gnb_menu_a">Room</a>
+            <a href="#" class="gnb_menu_a">Social</a>
+            <a href="#" class="gnb_menu_a">Resevation</a>
+         </div>
+
+         <!-- gnb 히든 메뉴 부분 -->
+         <div class="gnb_hiddenmenu">
+            <img src="img/icon_menu_main.png" class="gnb_hiddenmenu_btn" alt="히든 메뉴 버튼" id="gnb_hiddenmenu_main">
+         </div>
+      </div>
+      
+
+
+
+   </header>
+
+   <main>
+
+      <!-- Hero -->
+      <div class="hero_wrap">
+
+         <!-- Hero 타이틀 부분 -->
+         <div class="hero_title">
+            <h1 class="margin_b_20">Restraurant o'neul</h1>
+            <h3 class="margin_b_10">가장 풍요롭고 생생한 시간, 오늘을 주제로 한 전통 한식 다이닝</h3>
+            <p class="fs_22">Restaurant o’neul is a Korean dining inspired by the most fulfilling and vivid time, ‘today’.</p>
+         </div>
+         <!-- Hero 예약 부분 -->
+         <div class="hero_reservation">
+               <img src="img/icon_reservation.png" class="hero_reservation_img">
+               <h4><a href="#" class="hero_reservation_a">Reservation</a></h4>
+         </div>
+      </div>
+
+      <!-- Main Info -->
+
+      <div class="main_info_wrap">
+         <div class="main_info">
+            <div class="main_info_text">
+                  <h5 class="c_point">Restaurant o'neul</h5>
+                  <h2 class="margin_b_50">o'neul Value</h2>
+                  <p class="margin_b_20">레스토랑 오늘에서 선보이는 우리 음식은<br>
+                  한국인의 정체성을 담고 있는 한식에 기반을 두고 있으며,<br>
+                  우리 식 문화의 정통성을 지켜나가고 발전시켜 나가기 위해<br>
+                  레스토랑 오늘만의 스타일로 재해석 한 메뉴를 제공합니다.</p>
+                  <p>o'neul's dishes are inspired by Korean traditions and techniques.<br>
+                     Here we offer our unique understanding of authentic Korean cuisine,<br>
+                     introducing its true values through each menu.            
+                  </p> 
             </div>
-            <p style="line-height: 30px;"> 어머니 고영심</p>
-            <div>
-               <img src="img/call25.png">&nbsp;&nbsp;&nbsp;<img src="img/sms25.png">
+            <div class="main_info_img">
             </div>
-         </div>   
-   </div>
+         </div>
+      </div>
+
+      <!-- Main Menu -->
+
+      <div class="main_menu_wrap">
+         <div class="main_menu">
+            <h5 class="text_center c_point">Restaurant o'neul</h5>
+            <h2 class="text_center margin_b_50">o'neul Menu</h2>
+            <ul class="main_menu_ul">
+               <li class="main_menu_li"> 
+                  <div class="main_menu_li_title">
+                     <span>Luncheon</span>
+                     <span>+</span>
+                  </div>
+                  <div class="main_menu_li_menu">
+                     <div class="main_menu_li_menu_1" >
+                        <p class="fs_20">오늘 오찬(제주)</p>
+                        <p>55,000 KRW</p>
+                     </div>
+                     <div class="main_menu_li_menu_2">
+                        <p class="fs_20">겨울 오찬(제주)</p>
+                        <p>68,000 KRW</p>
+                     </div> 
+                  </div>
+               </li>
+ 
+               <li class="main_menu_li"> 
+                  <div class="main_menu_li_title">
+                     <span>Dinner</span>
+                     <span>+</span>
+                  </div>
+                  <div class="main_menu_li_menu">
+                     <div class="main_menu_li_menu_1">
+                        <p class="fs_20">제주 겨울 한상</p>
+                        <p>150,000 KRW</p>
+                     </div>
+                     <div class="main_menu_li_menu_2">
+                        <p class="fs_20">오늘 겨울 한상</p>
+                        <p>150,000 KRW</p>
+                     </div> 
+                  </div>
+               </li>
+
+               <li class="main_menu_li"> 
+                  <div class="main_menu_li_title">
+                     <span >Banquet / Party</span>
+                     <span>+</span>
+                  </div>
+                  <div class="main_menu_li_menu">
+                     <div class="main_menu_li_menu_1 width_60p">
+                        <p class="fs_20">맞춤 메뉴(Upon request)</p>
+                        <p>100,000 KRW ~</p>
+                     </div>
+                   
+                  </div>
+               </li>
    
+               <li class="main_menu_li"> 
+                  <div class="main_menu_li_title">
+                     <span>Signature wine / Liquor </span>
+                     <span>+</span>
+                  </div>
+                  <div class="main_menu_li_menu">
+                     <div class="main_menu_li_menu_1 width_40p">
+                        <p class="fs_20">Champaign / White / Red</p>
+                        <p>95,000 KRW ~</p>
+                     </div>
+                     <div class="main_menu_li_menu_2 width_60p">
+                        <p class="fs_20">Korean Traditional Liquor Pairing</p>
+                        <p>70,000 KRW ~</p>
+                     </div> 
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
 
-   </div>
-   <div style="width: 100%; padding-top: 60px;" >
-      <img src="img/title_img_4.jpg" style="width: 100%; margin-top: 60px;">
-      <img src="img/map.jpg" style="width: 100%; margin-top: 60px; display: block;">
+      <!-- Main People-->
+      <div class="main_people_wrap">
+         <div class="main_people">
+            <div class="main_people_1">
+               <div class="main_people_1_img">
 
-      <p style="text-align: center; background-color: rgb(101,101,101); color:white; line-height: 40px; font-size: 16px;">
-         카카오맵 바로가기</p>
+               </div>
+               <div class="main_people_1_text">
+                  <h3 class="main_people_position c_point margin_b_10">Head Chef</h3>
+                  <h2 class="main_people_name_kor margin_b_10"><strong>김준식</strong> 쉐프</h2>
+                  <h4 class="main_people_name_eng margin_b_20">Kim Junsik</h4>
 
-      <p style="padding-top:40px; padding-bottom: 40px; text-align: center; font-size: 16px; line-height:28px ;">
-         소풍컨벤션웨딩 7층 라온제나홀<br>
-         경기 부천시 송내대로 239<br>
-         032-624-7777 <br>
-         <br>
-         버스안내<br>
-         일반: 5-6, 23-2, 23-5, 37, 50-1, 52<br>
-         70, 87, 6-2, 56, 59, 59-1, 61, 66<br>
-         <br>
-         광역: 302, 700, 780, 1001, 5000,<br>
-         8106, 9300, 8906, 9008<br>
-         <br>
-         자가용안내<br>
-         “소풍컨벤션웨딩” 검색<br>
-         <br>
-         지하철안내<br>
-         7호선 상동역 - 1번출구 - 도보2분<br>
-         1호선 송내역 - 2번출구 - 27번 버스<br>
-      </p>
-   </div>
+                  <div class="main_people_career"> 
+                     <div class="main_people_career_dot"></div>
+                     <p class="main_people_career_text">前 쉐라톤 그랜드 워커힐 레스토랑 헤드쉐프</p>
+                  </div>
+                  <div class="main_people_career"> 
+                     <div class="main_people_career_dot"></div>
+                     <p class="main_people_career">쉐라톤 그랜드 워커힐 R&D 센터 Sous Chef</p>
+                  </div>
+                  <div class="main_people_career"> 
+                     <div class="main_people_career_dot"></div>
+                     <p class="main_people_career">Banquet Operation & VVIP Banquet  전담</p>
+                  </div>
+               </div>
+            
+            </div>
+            <div>
+               <h5 class="text_right c_point">Restaurant o’neul</h5>
+               <h2  class="text_right margin_b_50">o'neul People</h2>
+               <div class="main_people_2">
+               
+                  <div class="main_people_2_img">
 
-   <div style="background-color: rgb(200,200,200); display: flex;">
-      <img src="img/btn_facebook.png" style="width: 25%;">
-      <img src="img/btn_twitter.png" style="width: 25%;">
-      <img src="img/btn_kakao.png" style="width: 25%;">
-      <img src="img/btn_story.png" style="width: 25%;">
-   </div>
-   <h2 style="background-color: rgb(101,101,101); text-align: center; font-size:20px; color:white; line-height: 50px;">BHANDS CARD</h2>
+                  </div>
+                  <div class="main_people_2_text">
+                     <h3 class="main_people_position c_point margin_b_10 text_right">Director Chef</h3>
+                     <h2 class="main_people_name_kor margin_b_10 text_right"><strong>하영철</strong> 쉐프</h2>
+                     <h4 class="main_people_name_eng margin_b_20 text_right">Ha Youngchul</h4>
 
+                     <div class="main_people_career text_right"> 
+                        <div class="main_people_career_dot "></div>
+                        <p class="main_people_career_text text_right">SK NEW SCHOOL 교장</p>
+                     </div>
+                     <div class="main_people_career"> 
+                        <div class="main_people_career_dot"></div>
+                        <p class="main_people_career">행복에프엔씨재단 식문화 사업본부 고문</p>
+                     </div>
+                     <div class="main_people_career"> 
+                        <div class="main_people_career_dot"></div>
+                        <p class="main_people_career">前 쉐라톤그랜드워커힐 총주방장</p>
+                     </div>
+                  </div>
+               
+               </div>
+           </div>
+
+            <div class="main_people_3">
+               <div class="main_people_3_img">
+
+               </div>
+               <div class="main_people_3_text">
+                  <h3 class="main_people_position c_point margin_b_10 text_right">Service Team</h3>
+                  <h2 class="main_people_name_kor margin_b_10 text_right"><strong>이재석</strong> 지배인</h2>
+                  <h4 class="main_people_name_eng margin_b_20 text_right">Lee Jaeseok</h4>
+
+                  <div class="main_people_career"> 
+                     <div class="main_people_career_dot"></div>
+                     <p class="main_people_career_text">WSET Advance certificate 자격증보유 
+                        </p>
+                  </div>
+                  <div class="main_people_career"> 
+                     <div class="main_people_career_dot"></div>
+                     <p class="main_people_career">보르도 와인 마스터 코스 CIVB 수료</p>
+                  </div>
+                  <div class="main_people_career"> 
+                     <div class="main_people_career_dot"></div>
+                     <p class="main_people_career">SCAE 바리스타 국제자격증 보유</p>
+                  </div>
+               </div>
+            
+            </div>
+         </div>
+      </div>
+
+      <!-- Main Room -->
+      <div class="main_room_wrap">
+         <ul class="main_room">
+            <li class="main_room_li">
+               <p>1F</p>
+               <h2>Reception</h2>
+            </li>
+            <li class="main_room_li">
+               <p>2F</p>
+               <h2>Private Dining Room</h2>
+            </li>
+            <li class="main_room_li">
+               <p>3F</p>
+               <h2>Hall</h2>
+               <p>레스토랑 오늘 3층은 야외 중정을 사이에 두고<br>
+               2가지 스타일의 다이닝 홀이 있습니다.</p>
+               <p class="main_room_more">more &rarr;</p>
+            </li>
+            <li class="main_room_li">
+               <p>Banquet/Party</p>
+               <h2>Dining events</h2>
+            </li>
+         </ul>
+      </div>
+
+      <!-- Main Insta -->
+      <div class="main_insta_wrap">
+         <ul class="main_insta">
+            <li>
+               <img src="img/mis_insta.png">
+               <p>www.instagram.com<br>
+               /oneul_restraurant/</p>
+               <a href="https://www.instagram.com/oneul_restaurant/"></a>
+            </li>
+            <li>
+               <a href="https://www.instagram.com/p/CJpOiTGJjSV/"></a>
+            </li>
+            <li>
+               <a href="https://www.instagram.com/oneul_restaurant/">
+               </a>
+            </li>
+            <li> 
+               <a href="https://www.instagram.com/oneul_restaurant/"></a>
+            </li>
+            <li> 
+               <a href="https://www.instagram.com/oneul_restaurant/"></a>
+            </li>
+            <li> 
+               <a href="https://www.instagram.com/oneul_restaurant/"></a>
+            </li>
+            <li> 
+               <a href="https://www.instagram.com/oneul_restaurant/"></a>
+            </li>
+            <li> 
+               <a href="https://www.instagram.com/oneul_restaurant/"></a>
+            </li>
+         </ul>
+
+      </div>
+
+      <!-- Main Contact -->
+      <div class="main_contact_wrap">
+         <div class="main_contact">
+            <a href="https://map.kakao.com/?urlX=500041&urlY=1118505&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="100%" height="100%" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=500041&MY=1118505&S=0&IW=1920&IH=793&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a>
+
+            <div class="main_contact_location">
+               <img src="img/pin.png">
+            </div>
+
+            <div class="main_contact_info">
+               <div class="main_contact_info_left">
+                  <div>
+                     <img src="img/icon_reservation.png" alt="">
+                     <p>Reservation</p>
+                  </div>
+               </div>
+               <div class="main_contact_info_right">
+                  <p class="main_contact_info_subtitle">레스토랑 오늘</p>
+                  <h2 class="main_contact_info_title">Restaurant o'neul</h2>
+                  <p class="main_contact_info_address">04393 서울시 용산구 장문로 60(동빙고동 1-54)<br>
+                     60 Jangmun-ro, Youngsan-gu, Seoul, Korea</p>
+                  <p class="main_contact_info_search">- 네비게이션 검색 시 : 동빙고동 1-54<br>
+                     - 레스토랑 오늘 레드부스를 찾아주세요. (발렛 무료)</p>
+                  <div class="main_contact_info_phone">
+                     <img src="img/icon_tel.png" alt="">
+                     <p><span>Reservation</span><br>
+                        (+82) 02-792-1054</p>
+                     
+                     <p><span>Marketing & Promotion</span><br>
+                        (+82) 02-6445-5581</p>
+                  </div>
+                  <div class="main_contact_info_opentime">
+                     <img src="img/icon_time.png" alt="">
+                     <p>
+                        <span>Luncheon</span>: 12:00 ~ 15:00 &nbsp;&nbsp;&nbsp;<span>Dinner</span> : 18:00 ~ 22:00 <br><span>Last order</span> : 20:00<br>
+                           (일요일 휴무, Closed on Sunday)
+                     </p>
+                  </div>
+     
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+
+   </main>
+
+
+   <footer>
+      <ul class="footer_ul">
+         <li class="footer_li_left">
+            <img src="img/logo_f.png">
+         </li>
+         <li class="footer_li_center">
+            <p>레스토랑 오늘은 한식문화의 가치를 연구하고 특별한 경험을 소개하기 위해<br>
+               행복에프앤씨재단에서 운영하는 한식 다이닝 레스토랑입니다.
+            </p>
+            <p class="margin_b_20"> O’neul is a Korean dining restaurant operated by Happy F&C Foundation that strives to<br>
+               research true values of Korean food culture and spread its unique and special experience.</p>
+            <p>
+               Copyright © 2020 The Happiness food and culture foundation all right reserved.
+            </p>
+         </li>
+         <li class="footer_li_right">
+            <a href="#"  class="footer_a_final">
+               <img src="img/restaurantoneul_finalist.png">
+            </a> 
+            <a href="https://www.instagram.com/oneul_restaurant/" class="footer_a_insta">
+                <img src="img/insta.png" >
+            </a>
+            <a href="#" class="footer_a_family">
+               <p>Family Site &nbsp;&nbsp;&nbsp; ▼</p>
+            </a>
+         </li>
+      </ul>
+   </footer>
+   
 </body>
 </html>
